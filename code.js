@@ -1,4 +1,5 @@
 const canvas = document.querySelector(".canvas");
+const clearButton = document.querySelector(".clear");
 
 let isDrawing = false;
 
@@ -29,3 +30,7 @@ function paintSpot(x, y) {
   spot.style.background = "lightblue";
   canvas.appendChild(spot);
 }
+
+clearButton.addEventListener("click", () => {
+  canvas.innerHTML = "";
+});
