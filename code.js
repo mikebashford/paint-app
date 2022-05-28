@@ -13,3 +13,14 @@ canvas.addEventListener("mouseup", (e) => {
 canvas.addEventListener("mouseleave", (e) => {
   isDrawing = false;
 });
+
+paintSpot(100, 100);
+
+function paintSpot(x, y) {
+  const spot = document.createElement("div");
+  spot.className = "spot circleOption";
+  spot.style.left = `${x}px`;
+  spot.style.top = `${y}px`;
+  spot.style.background = "lightblue";
+  canvas.appendChild(spot);
+}
